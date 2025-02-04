@@ -1,0 +1,26 @@
+body{
+    background-color:grey;
+    text-align: center;
+    color: black;
+    font-family:'Times New Roman', Times, serif
+}
+
+a{
+    color:beige;
+    text-decoration: none;
+
+}
+a:hover{
+    color:crimson;
+    text-decoration: line;
+}
+
+main{
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2{
+    text-align: center;
+}
