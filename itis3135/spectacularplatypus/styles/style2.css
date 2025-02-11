@@ -1,17 +1,17 @@
 body{
-    background-color:turquoise;
+    background-color:black;
     text-align: center;
-    color: black;
+    color: teal;
     font-family:'Times New Roman', Times, serif
 }
 
 a{
-    color:orange;
+    color: darkmagenta;
     text-decoration: none;
 
 }
 a:hover{
-    color:crimson;
+    color:gray;
     text-decoration: line;
 }
 
