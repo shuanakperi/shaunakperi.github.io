@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 
-/* Header */
+
 header {
     background-color: #004466;
     color: white;
@@ -15,7 +15,7 @@ header {
     padding: 1rem 0;
 }
 
-header h1 {
+h1 {
     margin: 0;
     font-size: 1.8rem;
 }
@@ -35,7 +35,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Main Content */
+
 main {
     max-width: 800px;
     margin: 20px auto;
@@ -49,7 +49,7 @@ h2 {
     color: #004466;
 }
 
-/* Footer */
+
 footer {
     background-color: #004466;
     color: white;
@@ -68,7 +68,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Image Styling */
+
 figure {
     text-align: center;
 }
@@ -85,7 +85,7 @@ figcaption {
     margin-top: 5px;
 }
 
-/* List Styling */
+
 ul {
     list-style-type: square;
     padding-left: 20px;
