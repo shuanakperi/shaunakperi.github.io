@@ -1,14 +1,13 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #121212; 
+    color: #e0e0e0; 
 }
 
 header {
-    background-color: #1c1c1c;
+    background-color: #1c1c1c; 
     color: #ffffff;
     text-align: center;
     padding: 1.2rem 0;
@@ -24,7 +23,7 @@ nav {
 }
 
 nav a {
-    color: #d32f2f;
+    color: #d32f2f; 
     text-decoration: none;
     margin: 0 12px;
     font-weight: bold;
@@ -32,27 +31,24 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    color: #ff5252;
+    color: #ff5252; 
 }
 
-
 main {
-    max-width: 1200px; 
-    width: 90%; 
-    margin: 0 auto; 
-    background: #1e1e1e;
+    max-width: 800px;
+    margin: 25px auto;
+    background: #1e1e1e; 
     padding: 22px;
     border-radius: 6px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); 
 }
 
 h2 {
-    color: #d32f2f;
+    color: #d32f2f; 
 }
 
-
 footer {
-    background-color: #1c1c1c;
+    background-color: #1c1c1c; 
     color: #ffffff;
     text-align: center;
     padding: 12px 0;
@@ -60,16 +56,15 @@ footer {
 }
 
 footer a {
-    color: #d32f2f;
+    color: #d32f2f; 
     text-decoration: none;
     margin: 0 10px;
 }
 
 footer a:hover {
     text-decoration: underline;
-    color: #ff5252;
+    color: #ff5252; 
 }
-
 
 figure {
     text-align: center;
@@ -79,15 +74,14 @@ figure img {
     max-width: 100%;
     height: auto;
     border-radius: 6px;
-    border: 1px solid #333;
+    border: 1px solid #333; 
 }
 
 figcaption {
     font-style: italic;
-    color: #b0b0b0;
+    color: #b0b0b0; 
     margin-top: 5px;
 }
-
 
 ul {
     list-style-type: square;
@@ -98,9 +92,8 @@ li {
     margin-bottom: 10px;
 }
 
-
 button {
-    background-color: #d32f2f;
+    background-color: #d32f2f; 
     color: #ffffff;
     border: none;
     padding: 10px 16px;
@@ -110,35 +103,5 @@ button {
 }
 
 button:hover {
-    background-color: #ff5252;
-}
-
-
-@media (max-width: 768px) { 
-    main {
-        width: 95%;
-        padding: 18px;
-    }
-
-    h1 {
-        font-size: 1.6rem;
-    }
-}
-
-@media (max-width: 480px) { 
-    main {
-        width: 100%;
-        padding: 15px;
-        border-radius: 0;
-    }
-
-    h1 {
-        font-size: 1.4rem;
-    }
-
-    nav a {
-        display: block;
-        margin: 8px 0;
-        text-align: center;
-    }
+    background-color: #ff5252; 
 }
