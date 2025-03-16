@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym & Lifting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #ff5733;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            background-color: #444;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background-color: #ff7733;
+        }
+        main {
+            padding: 20px;
+        }
+        .content-section {
+            display: none;
+            background: #292929;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 87, 51, 0.5);
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #111;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        footer p, footer a {
+            color: #ccc;
+            font-size: 14px;
+        }
+        footer a:hover {
+            color: white;
+        }
+        .validation-buttons a {
+            display: inline-block;
+            background: #333;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            margin: 5px;
+        }
+        .validation-buttons a:hover {
+            background: #ff5733;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gym & Lifting</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('about')">About Me</a></li>
+                <li><a href="#" onclick="showSection('schedule')">Best Times</a></li>
+                <li><a href="#" onclick="showSection('locations')">Best Locations</a></li>
+                <li><a href="#" onclick="showSection('how')">How</a></li>
+                <li><a href="#" onclick="showSection('why')">Why</a></li>
+                <li><a href="#" onclick="showSection('ai-prompts')">AI Prompts</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="content-section">
+            <h2>What is Gym & Lifting?</h2>
+            <p>Gym & lifting is more than just exercise; it's a lifestyle...</p>
+            <figure>
+                <img src="images/lifting.jpg" alt="Lifting Weights">
+                <figcaption>Weightlifting in action.</figcaption>
+                <p><em>AI-generated image using prompt: "A person lifting heavy weights in a modern gym."</em></p>
+            </figure>
+        </section>
+        
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>My journey in fitness started five years ago...</p>
+        </section>
+        
+        <section id="schedule" class="content-section">
+            <h2>Best Times to Work Out</h2>
+            <p>Timing your workouts can maximize efficiency...</p>
+        </section>
+        
+        <section id="locations" class="content-section">
+            <h2>Best Locations for Training</h2>
+            <p>Finding the right gym is essential...</p>
+        </section>
+        
+        <section id="how" class="content-section">
+            <h2>How to Start Lifting</h2>
+            <p>Beginner-friendly guide to weightlifting...</p>
+        </section>
+        
+        <section id="why" class="content-section">
+            <h2>Why You Should Lift</h2>
+            <p>The benefits of lifting go beyond aesthetics...</p>
+        </section>
+        
+    </main>
+    
+    <footer>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.min.js"></script>
+    </footer>
+    
+    <script>
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+        document.addEventListener("DOMContentLoaded", () => showSection('home'));
+    </script>
+</body>
+</html>
