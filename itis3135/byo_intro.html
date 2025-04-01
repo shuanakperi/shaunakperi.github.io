@@ -1,85 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BYO Intro</title>
-  <link rel="stylesheet" href="styles/default.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYO Intro</title>
+    <script src="scripts/survey.js" defer></script>
+    <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
-  <header>
-    <div data-include="components/header.html"></div>
-  </header>
+    <header >
+        <div data-include="components/header.html"></div>
+    </header>
 
-  <h2>BYO Intro Page</h2>
+    <main>
+        <h2>BYO Intro</h2>
+        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+        
+        <form id="introForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" value="Your Name" required><br>
 
-  <h2>Time to BYO Intro page! Please fill out the form below to create your own page.</h2>
+            <label for="nickname">Nickname:</label>
+            <input type="text" id="nickname" value="Your Nickname"><br>
 
-  <form id="introForm">
-    <label for="lastName">Last Name:</label>
-    <input type="text" id="lastName" name="lastName" required><br>
+            <label for="image">Profile Image URL:</label>
+            <input type="text" id="image" value="images/default.jpg"><br>
 
-    <label for="firstName">First Name:</label>
-    <input type="text" id="firstName" name="firstName" required><br>
+            <label for="background">Personal Background:</label>
+            <input type="text" id="background" value="Your background"><br>
 
-    <label for="middleInitial">Middle Initial:</label>
-    <input type="text" id="middleInitial" name="middleInitial" maxlength="1"><br>
+            <label for="professional">Professional Background:</label>
+            <input type="text" id="professional" value="Your experience"><br>
 
-    <label for="nickname">Nickname:</label>
-    <input type="text" id="nickname" name="nickname"><br>
+            <label for="academic">Academic Background:</label>
+            <input type="text" id="academic" value="Your academic background"><br>
 
-    <label for="mascot">Mascot:</label>
-    <input type="text" id="mascot" name="mascot" required><br>
+            <label for="software">Programming/Software Background:</label>
+            <input type="text" id="software" value="Your software skills"><br>
 
-    <label for="image">Image (PNG/JPG):</label>
-    <input type="file" id="image" name="image" accept=".png, .jpg, .jpeg" required><br>
+            <label for="platform">Primary Computer Platform:</label>
+            <input type="text" id="platform" value="Your computer platform"><br>
 
-    <label for="imageCaption">Image Caption:</label>
-    <input type="text" id="imageCaption" name="imageCaption" required><br>
+            <label for="courses">Courses:</label>
+            <div id="courseList">
+                <input type="text" value="Course 1">
+            </div>
+            <button type="button" onclick="addCourse()">Add Course</button><br>
 
-    <label for="personalBackground">Personal Background:</label>
-    <textarea id="personalBackground" name="personalBackground" required></textarea><br>
+            <label for="funFact">Funny/Interesting Item:</label>
+            <input type="text" id="funFact" value="A fun fact about you"><br>
 
-    <label for="professionalBackground">Professional Background:</label>
-    <textarea id="professionalBackground" name="professionalBackground" required></textarea><br>
+            <label for="share">I'd also like to share:</label>
+            <input type="text" id="share" value="Something you love"><br>
 
-    <label for="academicBackground">Academic Background:</label>
-    <textarea id="academicBackground" name="academicBackground" required></textarea><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
 
-    <label for="programmingsoftwareBackground">Programming/Software Background:</label>
-    <textarea id="programmingsoftwareBackground" name="programmingsoftwareBackground" required></textarea><br>
+        <div id="result"></div>
+    </main>
 
-    <label for="primaryPlatform">Primary Computer Platform:</label>
-    <input type="text" id="primaryPlatform" name="primaryPlatform" required><br>
-
-    <div id="courses">
-      <label for="courses">Courses Currently Taking:</label>
-      <input type="text" id="course1" name="course1">
-      <button type="button" onclick="addCourse()">Add Course</button>
-    </div>
-
-    <label for="funnyThing">Funny/Interesting Item to Remember me by:</label>
-    <input type="text" id="funnyThing" name="funnyThing"><br>
-
-    <label for="anythingElse">I'd also like to share:</label>
-    <textarea id="anythingElse" name="anythingElse"></textarea><br>
-
-    <label>
-        I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.
-        <input type="checkbox" id="agree" name="agree" required>
-    </label><br>
-
-    <input type="submit" value="Submit">
-    <input type="reset" value="Reset">
-  </form>
-
-  <div id="result"></div>
-
-  <footer>
-    <div data-include="components/footer.html"></div>
+    <footer >
+        <div data-include="components/footer.html"></div>
         <script src="scripts/HTMLInclude.min.js"></script>
-  </footer>
-
-  <script src="survey.js"></script>
+    </footer>
 </body>
 </html>

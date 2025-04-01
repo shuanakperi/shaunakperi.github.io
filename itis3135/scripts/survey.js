@@ -1,72 +1,73 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("introForm");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        displayResults();
+    });
 
-document.getElementById('introForm').addEventListener('submit', function(event) {
-    if (!document.getElementById('name').value || !document.getElementById('mascot').value || !document.getElementById('image').value || !document.getElementById('imageCaption').value) {
-      alert("Please fill out all required fields.");
-      event.preventDefault();
-    }
-  });
-  
-  
-  function resetForm() {
-    document.getElementById('introForm').reset();
-    document.getElementById('result').innerHTML = '';
-  }
-  
-  
-  let courseCount = 1;
-  function addCourse() {
-    courseCount++;
-    let newCourse = document.createElement('div');
-    newCourse.innerHTML = `
-      <input type="text" id="course${courseCount}" name="course${courseCount}">
-      <button type="button" onclick="deleteCourse(this)">Delete</button>`;
-    document.getElementById('courses').appendChild(newCourse);
-  }
-  
-  
-  function deleteCourse(button) {
-    button.parentElement.remove();
-  }
-  
-  
-  document.getElementById('introForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    let formData = new FormData(event.target);
-    
-    let resultHTML = `
-      <h2>Your Introduction Page</h2>
-      <p><strong>Name:</strong> ${formData.get('firstName')} ${formData.get('middleInitial')} ${formData.get('lastName')}</p>
-      <p><strong>Nickname:</strong> ${formData.get('nickname')}</p>
-      <p><strong>Mascot:</strong> ${formData.get('mascot')}</p>
-      <p><strong>Image Caption:</strong> ${formData.get('imageCaption')}</p>
-      <p><strong>Personal Background:</strong> ${formData.get('personalBackground')}</p>
-      <p><strong>Professional Background:</strong> ${formData.get('professionalBackground')}</p>
-      <p><strong>Academic Background:</strong> ${formData.get('academicBackground')}</p>
-      <p><strong>Web Development Background:</strong> ${formData.get('webDevelopmentBackground')}</p>
-      <p><strong>Primary Platform:</strong> ${formData.get('primaryPlatform')}</p>
-      <p><strong>Funny Thing:</strong> ${formData.get('funnyThing')}</p>
-      <p><strong>Anything Else?</strong> ${formData.get('anythingElse')}</p>
-      <p><strong>Courses Currently Taking:</strong> ${getCourses()}</p>
-    `;
-    
-    document.getElementById('result').innerHTML = resultHTML;
+    form.addEventListener("reset", function() {
+        document.getElementById("result").innerHTML = "";
+    });
 });
 
-function getCourses() {
-    let courses = [];
-    document.querySelectorAll('[id^="course"]').forEach(course => {
-        if (course.value.trim() !== '') {
-            courses.push(course.value);
-        }
-    });
-    return courses.length > 0 ? courses.join(', ') : 'No courses listed';
+function addCourse() {
+    let courseList = document.getElementById("courseList");
+    let newCourse = document.createElement("input");
+    newCourse.type = "text";
+    newCourse.placeholder = "Enter course name";
+    
+    let deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete";
+    deleteButton.onclick = function() {
+        courseList.removeChild(newCourse);
+        courseList.removeChild(deleteButton);
+    };
+    
+    courseList.appendChild(newCourse);
+    courseList.appendChild(deleteButton);
 }
 
-function addCourse() {
-    let courseCount = document.querySelectorAll('[id^="course"]').length + 1;
-    let newCourseInput = document.createElement("input");
-    newCourseInput.type = "text";
-    newCourseInput.id = `course${courseCount}`;
-    newCourseInput.name = `course${courseCount}`;
-    document.getElementById("courses").insertBefore(newCourseInput, document.getElementById("courses").lastElementChild);
+function displayResults() {
+    const name = document.getElementById("name").value;
+    const nickname = document.getElementById("nickname").value;
+    const image = document.getElementById("image").value;
+    const background = document.getElementById("background").value;
+    const professional = document.getElementById("professional").value;
+    const academic = document.getElementById("academic").value;
+    const software = document.getElementById("software").value;
+    const platform = document.getElementById("platform").value;
+    const funFact = document.getElementById("funFact").value;
+    const share = document.getElementById("share").value;
+
+    let courses = [];
+    document.querySelectorAll("#courseList input").forEach(course => {
+        if (course.value.trim() !== "") {
+            courses.push(course.value.trim());
+        }
+    });
+
+    let resultHTML = `
+        <h2>${name} | ${nickname}</h2>
+        <figure>
+            <img src="${image}" alt="Profile image of ${name}">
+            <figcaption>${name}'s Profile Picture</figcaption>
+        </figure>
+        <ul>
+            <li><strong>Personal Background:</strong> ${background}</li>
+            <li><strong>Professional Background:</strong> ${professional}</li>
+            <li><strong>Academic Background:</strong> ${academic}</li>
+            <li><strong>Programming/Software Background:</strong> ${software}</li>
+            <li><strong>Primary Computer Platform:</strong> ${platform}</li>
+            <li><strong>Courses:</strong>
+                <ul>
+                    ${courses.map(course => `<li>${course}</li>`).join("")}
+                </ul>
+            </li>
+            <li><strong>Funny/Interesting Item:</strong> ${funFact}</li>
+            <li><strong>I'd also like to share:</strong> ${share}</li>
+        </ul>
+        <button onclick="location.reload()">Reset</button>
+    `;
+
+    document.getElementById("result").innerHTML = resultHTML;
 }
