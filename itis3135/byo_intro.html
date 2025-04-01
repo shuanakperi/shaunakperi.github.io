@@ -1,78 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYO Intro</title>
-    <script src="scripts/survey.js" defer></script>
-    <link rel="stylesheet" href="styles/default.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BYO Intro</title>
+  <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
-    <header >
-        <div data-include="components/header.html"></div>
-    </header>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
 
-    <h2>BYO Intro</h2>
-    <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+  <h2>BYO Intro Page</h2>
 
-    <form id="byoForm">
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required><br>
+  <h2>Time to BYO Intro page! Please fill out the form below to create your own page.</h2>
 
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required><br>
+  <form id="introForm">
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required><br>
 
-        <label for="middleInitial">Middle Initial:</label>
-        <input type="text" id="middleInitial" name="middleInitial" maxlength="1"><br>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required><br>
 
-        <label for="nickname">Nickname:</label>
-        <input type="text" id="nickname" name="nickname"><br>
+    <label for="middleInitial">Middle Initial:</label>
+    <input type="text" id="middleInitial" name="middleInitial" maxlength="1"><br>
 
-        <label for="mascot">Mascot:</label>
-        <input type="text" id="mascot" name="mascot" required><br>
+    <label for="nickname">Nickname:</label>
+    <input type="text" id="nickname" name="nickname"><br>
 
-        <label for="image">Image Upload (PNG or JPG):</label>
-        <input type="file" id="image" name="image" accept="image/png, image/jpeg" required><br>
+    <label for="mascot">Mascot:</label>
+    <input type="text" id="mascot" name="mascot" required><br>
 
-        <label for="imageCaption">Image Caption:</label>
-        <input type="text" id="imageCaption" name="imageCaption" required><br>
+    <label for="image">Image (PNG/JPG):</label>
+    <input type="file" id="image" name="image" accept=".png, .jpg, .jpeg" required><br>
 
-        <label for="personalBackground">Personal Background:</label>
-        <textarea id="personalBackground" name="personalBackground" required></textarea><br>
+    <label for="imageCaption">Image Caption:</label>
+    <input type="text" id="imageCaption" name="imageCaption" required><br>
 
-        <label for="professionalBackground">Professional Background:</label>
-        <textarea id="professionalBackground" name="professionalBackground" required></textarea><br>
+    <label for="personalBackground">Personal Background:</label>
+    <textarea id="personalBackground" name="personalBackground" required></textarea><br>
 
-        <label for="academicBackground">Academic Background:</label>
-        <textarea id="academicBackground" name="academicBackground" required></textarea><br>
+    <label for="professionalBackground">Professional Background:</label>
+    <textarea id="professionalBackground" name="professionalBackground" required></textarea><br>
 
-        <label for="webDevelopmentBackground">Background in Web Development:</label>
-        <textarea id="webDevelopmentBackground" name="webDevelopmentBackground" required></textarea><br>
+    <label for="academicBackground">Academic Background:</label>
+    <textarea id="academicBackground" name="academicBackground" required></textarea><br>
 
-        <label for="computerPlatform">Primary Computer Platform:</label>
-        <input type="text" id="computerPlatform" name="computerPlatform" required><br>
+    <label for="webDevelopmentBackground">Background in Web Development:</label>
+    <textarea id="webDevelopmentBackground" name="webDevelopmentBackground" required></textarea><br>
 
-        <label>Courses Currently Taking:</label>
-        <div id="coursesContainer">
-            <button type="button" id="addCourse">Add Course</button>
-        </div><br>
+    <label for="primaryPlatform">Primary Computer Platform:</label>
+    <input type="text" id="primaryPlatform" name="primaryPlatform" required><br>
 
-        <label for="funnyThing">Funny Thing?</label>
-        <input type="text" id="funnyThing" name="funnyThing"><br>
+    <div id="courses">
+      <label for="courses">Courses Currently Taking:</label>
+      <input type="text" id="course1" name="course1">
+      <button type="button" onclick="addCourse()">Add Course</button>
+    </div>
 
-        <label for="anythingElse">Anything Else?</label>
-        <input type="text" id="anythingElse" name="anythingElse"><br>
+    <label for="funnyThing">Funny Thing:</label>
+    <input type="text" id="funnyThing" name="funnyThing"><br>
 
-        <input type="checkbox" id="agree" required>
-        <label for="agree">I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.</label><br>
+    <label for="anythingElse">Anything Else?</label>
+    <textarea id="anythingElse" name="anythingElse"></textarea><br>
 
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
-    </form>
+    <label>
+        I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.
+        <input type="checkbox" id="agree" name="agree" required>
+    </label><br>
 
-    <footer >
-        <div data-include="components/footer.html"></div>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+
+  <div id="result"></div>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
         <script src="scripts/HTMLInclude.min.js"></script>
-</footer>
+  </footer>
+
+  <script src="survey.js"></script>
 </body>
 </html>
