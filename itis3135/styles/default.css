@@ -159,18 +159,33 @@ li {
     margin-bottom: 10px;
 }
 
+#coursesContainer {
+    margin-top: 10px;
+}
+
+.course-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.course-entry input {
+    flex: 1;
+    margin-right: 10px;
+}
+
 @media only screen and (max-width: 700px){
     main {
-        width:90%;
-        height:100%;
+        width: 90%;
+        height: 100%;
         margin: 0% auto;
     }
 }
 
-@media  only screen and (max-width: 300px){
-    main{
+@media only screen and (max-width: 300px){
+    main {
         margin: 0 auto;
         width: 100%;
-        height:100%;
+        height: 100%;
     }
 }
