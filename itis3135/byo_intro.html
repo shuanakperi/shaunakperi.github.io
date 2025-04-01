@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BYO Intro</title>
-    <script src="Scripts/survey.js" defer></script>
+    <script src="scripts/survey.js" defer></script>
+    <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
-    <header id="header"></header>
+    <header >
+        <div data-include="components/header.html"></div>
+    </header>
 
     <h2>BYO Intro</h2>
     <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
@@ -67,6 +70,9 @@
         <input type="reset" value="Reset">
     </form>
 
-    <footer id="footer"></footer>
+    <footer >
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.min.js"></script>
+</footer>
 </body>
 </html>
