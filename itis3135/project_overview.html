@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Your Name ★ ITIS 3135 ★ Project Overview</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        main {
+            background: var(--lightgrey);
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        figure {
+            align-self: flex-start;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        figure img {
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+
+<div data-include="components/navbar.html"></div>
+<div data-replace="%text%:Client Project Overview" data-include="components/header.html"></div>
+
+<main>
+<h3>Project Overview</h3>
+<ol>
+    <li>Purpose: To promote a new Taekwondo school and provide information, events, and contact opportunities.</li>
+    <li>Intended Users: Prospective students, parents, community members interested in martial arts.</li>
+    <li>Overview of content: Instructor background, class schedules, philosophy, contact form, and media gallery.</li>
+</ol>
+
+<h3>Client Information</h3>
+<ol>
+    <li>Name: Skyler [Last Name]</li>
+    <li>Associated with: Independent Taekwondo School (startup)</li>
+    <li>Email: [private]</li>
+    <li>Phone: [private]</li>
+</ol>
+
+<h3>Site Map</h3>
+<figure>
+    <img src="images/sitemap.png" alt="Sitemap for Taekwondo school project">
+    <figcaption>Sitemap showing layout of Taekwondo website.</figcaption>
+</figure>
+
+<h3>Wireframe</h3>
+<figure>
+    <img src="images/wireframe.png" alt="Wireframe for Taekwondo school homepage">
+    <figcaption>Wireframe showing homepage layout.</figcaption>
+</figure>
+
+<section>
+    <h4>Home</h4>
+    <ol>
+        <li>Name of Page: index.html</li>
+        <li>Purpose: Introduce the school and mission</li>
+        <li>Audience/Users: General public, new visitors</li>
+        <li>Content: Welcome message, highlights of services, dynamic quote/testimonial</li>
+        <li>Enter Data? (Y/N): No</li>
+        <li>Data validation? (Y/N): N/A</li>
+        <li>Contain links? (Y/N): Yes</li>
+        <li>Actions?: Links to other sections, animated hero section</li>
+        <li>Special Notes: Include call-to-action</li>
+    </ol>
+</section>
+
+<section>
+    <h4>About</h4>
+    <ol>
+        <li>Name of Page: about.html</li>
+        <li>Purpose: Detail Skyler’s background, philosophy, and school values</li>
+        <li>Audience/Users: Interested students and parents</li>
+        <li>Content: Instructor bio, school mission</li>
+        <li>Enter Data? (Y/N): No</li>
+        <li>Data validation? (Y/N): N/A</li>
+        <li>Contain links? (Y/N): Yes</li>
+        <li>Actions?: Link to Contact or Schedule</li>
+        <li>Special Notes: Include image of instructor</li>
+    </ol>
+</section>
+
+<section>
+    <h4>Schedule</h4>
+    <ol>
+        <li>Name of Page: schedule.html</li>
+        <li>Purpose: Display class times, upcoming events</li>
+        <li>Audience/Users: Current/prospective students</li>
+        <li>Content: Table of class types, calendar plugin</li>
+        <li>Enter Data? (Y/N): No</li>
+        <li>Data validation? (Y/N): N/A</li>
+        <li>Contain links? (Y/N): Yes</li>
+        <li>Actions?: Dynamic filtering, jQuery tab sections</li>
+        <li>Special Notes: Use jQuery UI tabs or accordion</li>
+    </ol>
+</section>
+
+<section>
+    <h4>Gallery</h4>
+    <ol>
+        <li>Name of Page: gallery.html</li>
+        <li>Purpose: Showcase media from training and events</li>
+        <li>Audience/Users: Everyone</li>
+        <li>Content: Interactive photo gallery using Lightbox</li>
+        <li>Enter Data? (Y/N): No</li>
+        <li>Data validation? (Y/N): N/A</li>
+        <li>Contain links? (Y/N): No</li>
+        <li>Actions?: Modal gallery, dynamic filtering</li>
+        <li>Special Notes: Consider slideshow for events</li>
+    </ol>
+</section>
+
+<section>
+    <h4>Contact</h4>
+    <ol>
+        <li>Name of Page: contact.html</li>
+        <li>Purpose: Allow inquiries, sign-up interest</li>
+        <li>Audience/Users: Potential students, parents</li>
+        <li>Content: Form with name, email, message, dropdown interest field</li>
+        <li>Enter Data? (Y/N): Yes</li>
+        <li>Data validation? (Y/N): Yes (JS form validation)</li>
+        <li>Contain links? (Y/N): No</li>
+        <li>Actions?: Validate, display confirmation</li>
+        <li>Special Notes: Use AJAX for form submission preview only (no actual sending)</li>
+    </ol>
+</section>
+
+<h3>Dynamic Functionality</h3>
+<ul>
+    <li>JavaScript Form Validation on Contact Page</li>
+    <li>jQuery UI Tabs/Accordion on Schedule Page</li>
+    <li>AJAX-based form preview on Contact Page</li>
+    <li>Interactive Gallery (Lightbox plugin)</li>
+    <li>Dynamic Quote Rotator on Home Page</li>
+</ul>
+
+<h3>References / Notes</h3>
+<ul>
+    <li>Inspired by martial arts school sites: https://www.nationaltkd.com/ and https://www.taekwondoamerica.com/</li>
+    <li>Tools used: draw.io, Google Drive, jQuery UI, Lightbox2</li>
+    <li>Created by: [Your Name]</li>
+    <li>Date/Time: [Insert date and time]</li>
+</ul>
+</main>
+
+<div data-include="components/footer.html"></div>
+<script src="scripts/HTMLInclude.js"></script>
+</body>
+</html>
