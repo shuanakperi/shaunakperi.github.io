@@ -17,14 +17,20 @@
         <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
         
         <form id="introForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" value="Your Name" required><br>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" value="Last Name" required><br>
+
+            <label for="middleinitial">Middle Initial: </label>
+            <input type="text" id="middleinitial" value="Middle Initial" maxlength="1">
+
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" value="First Name" required><br>
 
             <label for="nickname">Nickname:</label>
             <input type="text" id="nickname" value="Your Nickname"><br>
 
-            <label for="image">Profile Image URL:</label>
-            <input type="text" id="image" value="images/default.jpg"><br>
+            <label for="image">Image: </label>
+            <input type="file" id="image" accept="image/png, image/jpeg, image/jpg">
 
             <label for="background">Personal Background:</label>
             <input type="text" id="background" value="Your background"><br>
