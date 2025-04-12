@@ -11,7 +11,7 @@ const images = [
   { image: 'images/gallery/pencil.jpg', text: 'My pencil.' },
   { image: 'images/gallery/earphones.jpg', text: 'My earphones.' },
   { image: 'images/gallery/razor.jpg', text: 'My Razor.' },
-  { image: 'images/gallery/inside.jpg', text: 'Inside of my dorm room.' },
+  { image: 'images/gallery/inside.jpg', text: 'Inside of my dorm room.' }
 ];
 
 const update = () => {
