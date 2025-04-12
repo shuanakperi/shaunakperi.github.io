@@ -15,14 +15,25 @@ const images = [
 ];
 
 const update = () => {
-  const image = images[currentImage];
-  $('#slide-image').attr('src', image.image).attr('alt', image.text);
+  const currentImgData = images[currentImage];
+
+  $('#slide-image')
+    .attr('src', currentImgData.image)
+    .attr('alt', currentImgData.text);
+
   const letters = Array.from($('#position').text());
+  if (letters.length !== images.length) {
+    console.warn('Mismatch between #position letters and images. Fixing...');
+    const newText = images.map((_, i) => String.fromCharCode(65 + i)).join('');
+    $('#position').text(newText);
+    return update(); 
+  }
+
   const newHTML = letters
     .map((letter, i) => (i === currentImage ? `<strong>${letter}</strong>` : letter))
     .join('');
   $('#position').html(newHTML);
-  $('#slide-caption').text(`${letters[currentImage]} is for ${image.text}`);
+  $('#slide-caption').text(`${letters[currentImage]} is for ${currentImgData.text}`);
 };
 
 const navigateTo = (index) => {
@@ -30,9 +41,10 @@ const navigateTo = (index) => {
   update();
 };
 
-$('#previous').on('click', () => navigateTo(currentImage - 1));
-$('#next').on('click', () => navigateTo(currentImage + 1));
-$('#first').on('click', () => navigateTo(0));
-$('#end').on('click', () => navigateTo(images.length - 1));
-
-$(document).ready(update);
+$(document).ready(() => {
+  $('#previous').on('click', () => navigateTo(currentImage - 1));
+  $('#next').on('click', () => navigateTo(currentImage + 1));
+  $('#first').on('click', () => navigateTo(0));
+  $('#end').on('click', () => navigateTo(images.length - 1));
+  update();
+});
