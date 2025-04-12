@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shuanak Peri's Spectacular Platypus | ITIS 3135 | Slideshow</title>
+  <link rel="stylesheet" href="styles/default.css" />
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <style>
+    main {
+      background: linear-gradient(135deg, var(--lightgrey), #fdfdfd);
+      border-radius: 20px;
+      padding: 3rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      max-width: 90%;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--darkblue);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    #position {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #555;
+      letter-spacing: 0.1em;
+    }
+
+    #slideshow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+    }
+
+    figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    #slideshow img {
+      width: 100%;
+      max-width: 750px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      border: 4px solid var(--blue);
+    }
+
+    figcaption {
+      margin-top: 0.75rem;
+      font-size: 1.2rem;
+      color: #333;
+      font-style: italic;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button {
+      background: linear-gradient(to right, var(--blue), var(--darkblue));
+      color: white;
+      font-size: 1.1rem;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: var(--accent);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+  <main>
+    <h2>Slideshow: Shaunak Peri</h2>
+    <p id="position">S H A U N A K P E R I </p>
+
+    <div id="slideshow">
+      <figure>
+        <img id="slide-image" src="images/gallery/" alt="Shaunak Headshot">
+        <figcaption id="slide-caption">Shaunak - Headshot</figcaption>
+      </figure>
+
+      <div class="controls">
+        <button id="first">&larrb; Beginning</button>
+        <button id="previous">&larr; Previous</button>
+        <button id="next">Next &rarr;</button>
+        <button id="end">End &rarrb;</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+  <script src="scripts/slideshow.js"></script>
+</footer>
+  
+</body>
+
+</html>
