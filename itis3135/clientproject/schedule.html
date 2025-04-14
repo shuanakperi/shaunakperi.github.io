@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule - Skyler's Taekwondo School</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Skyler's Taekwondo School</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Class Schedule</h2>
+      <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1">Beginners</a></li>
+          <li><a href="#tabs-2">Intermediate</a></li>
+          <li><a href="#tabs-3">Advanced</a></li>
+        </ul>
+        <div id="tabs-1">
+          <p>Monday & Wednesday: 4:00 PM - 5:00 PM<br>Saturday: 10:00 AM - 11:00 AM</p>
+        </div>
+        <div id="tabs-2">
+          <p>Tuesday & Thursday: 5:00 PM - 6:30 PM<br>Saturday: 11:00 AM - 12:30 PM</p>
+        </div>
+        <div id="tabs-3">
+          <p>Monday, Wednesday, Friday: 6:00 PM - 7:30 PM<br>Sunday: 12:00 PM - 1:30 PM</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Upcoming Events</h2>
+      <div id="accordion">
+        <h3>Belt Testing - May 15</h3>
+        <div><p>Students eligible for testing should arrive by 9:00 AM. Testing begins at 9:30 AM sharp.</p></div>
+
+        <h3>Summer Camp - June 10-14</h3>
+        <div><p>A week of intensive training and fun activities for all levels. Register early to reserve a spot!</p></div>
+
+        <h3>Parent Night - July 5</h3>
+        <div><p>Meet instructors, watch demos, and learn about student progress. Open to all family members.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Skyler's Taekwondo School</p>
+  </footer>
+
+  <script>
+    $(function() {
+      $("#tabs").tabs();
+      $("#accordion").accordion({
+        collapsible: true,
+        heightStyle: "content"
+      });
+    });
+  </script>
+</body>
+</html>
