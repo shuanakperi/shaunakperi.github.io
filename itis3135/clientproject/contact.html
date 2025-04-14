@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Skyler's Taekwondo School</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Skyler's Taekwondo School</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="interest">Interest:</label>
+        <select id="interest" name="interest">
+          <option value="">--Select--</option>
+          <option value="beginner">Beginner Classes</option>
+          <option value="events">Events</option>
+          <option value="private">Private Lessons</option>
+        </select><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="preview" style="display:none; margin-top: 2rem; background: #f0f0f0; padding: 1rem; border-radius: 8px;">
+        <h3>Preview:</h3>
+        <p><strong>Name:</strong> <span id="preview-name"></span></p>
+        <p><strong>Email:</strong> <span id="preview-email"></span></p>
+        <p><strong>Interest:</strong> <span id="preview-interest"></span></p>
+        <p><strong>Message:</strong><br><span id="preview-message"></span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Skyler's Taekwondo School</p>
+  </footer>
+
+  <script>
+    $('#contactForm').on('submit', function(e) {
+      e.preventDefault();
+
+      const name = $('#name').val().trim();
+      const email = $('#email').val().trim();
+      const interest = $('#interest').val();
+      const message = $('#message').val().trim();
+
+      if (!name || !email || !interest || !message) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      // AJAX-style preview
+      $('#preview-name').text(name);
+      $('#preview-email').text(email);
+      $('#preview-interest').text($('#interest option:selected').text());
+      $('#preview-message').text(message);
+      $('#preview').fadeIn();
+    });
+  </script>
+</body>
+</html>
