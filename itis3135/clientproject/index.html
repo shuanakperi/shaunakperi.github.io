@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Skyler's Taekwondo School</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Skyler's Taekwondo School</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="welcome">
+      <h2>Welcome to Our Dojang</h2>
+      <p>Empowering the community through martial arts excellence. Join us to build strength, discipline, and confidence!</p>
+    </section>
+    <section class="highlights">
+      <ul>
+        <li>Beginner to advanced classes</li>
+        <li>Experienced black belt instruction</li>
+        <li>Family-friendly environment</li>
+      </ul>
+    </section>
+    <section class="quote">
+      <blockquote id="dynamicQuote"></blockquote>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Skyler's Taekwondo School</p>
+  </footer>
+
+  <script>
+    const quotes = [
+      "A black belt is just a white belt who never quit.",
+      "Discipline is the bridge between goals and accomplishment.",
+      "The journey of a thousand miles begins with a single kick."
+    ];
+    document.getElementById("dynamicQuote").innerText = quotes[Math.floor(Math.random() * quotes.length)];
+  </script>
+</body>
+</html>
