@@ -1,17 +1,24 @@
-let bottomImg, topImg;
-
-function preload() {
-  bottomImg = loadImage('assets/parrot-color.png'); 
-  topImg = loadImage('assets/parrot-bw.png');
-}
-
 function setup() {
-  createCanvas(720, 400);
-  noCursor();
-  cursor('assets/brush.png', 20, -10); 
-  image(topImg, 0, 0);
-}
-
-function mouseDragged() {
-  copy(bottomImg, mouseX, mouseY, 20, 20, mouseX, mouseY, 20, 20);
-}
+    // Create the canvas
+    createCanvas(710, 400);
+  
+    // Set background to black
+    background(0);
+  
+    // Set width of the lines
+    strokeWeight(10);
+  
+    // Set color mode to hue-saturation-brightness (HSB)
+    colorMode(HSB);
+  
+    // Set screen reader accessible description
+    describe('A blank canvas where the user draws by dragging the mouse');
+  }
+  
+  function mouseDragged() {
+    // Set the color based on the mouse position, and draw a line
+    // from the previous position to the current position
+    let lineHue = mouseX - mouseY;
+    stroke(lineHue, 90, 90);
+    line(pmouseX, pmouseY, mouseX, mouseY);
+  }
