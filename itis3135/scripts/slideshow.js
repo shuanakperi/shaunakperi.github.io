@@ -43,7 +43,7 @@ const navigateTo = (index) => {
 
 const startSlideshow = () => {
   if (!interval) {
-    interval = setInterval(() => navigateTo(currentImage + 1), 2000); // Change image every 2 seconds
+    interval = setInterval(() => navigateTo(currentImage + 1), 2000); 
   }
 };
 
