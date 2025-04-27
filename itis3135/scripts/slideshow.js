@@ -1,4 +1,5 @@
 let currentImage = 0;
+let interval = null; // For autoplay interval
 
 const images = [
   { image: 'images/gallery/shaunakperi.PNG', text: 'Shaunak Peri' },
@@ -26,7 +27,7 @@ const update = () => {
     console.warn('Mismatch between #position letters and images. Fixing...');
     const newText = images.map((_, i) => String.fromCharCode(65 + i)).join('');
     $('#position').text(newText);
-    return update(); 
+    return update();
   }
 
   const newHTML = letters
@@ -41,10 +42,24 @@ const navigateTo = (index) => {
   update();
 };
 
+const startSlideshow = () => {
+  if (!interval) {
+    interval = setInterval(() => navigateTo(currentImage + 1), 2000); // Change image every 2 seconds
+  }
+};
+
+const stopSlideshow = () => {
+  clearInterval(interval);
+  interval = null;
+};
+
 $(document).ready(() => {
   $('#previous').on('click', () => navigateTo(currentImage - 1));
   $('#next').on('click', () => navigateTo(currentImage + 1));
   $('#first').on('click', () => navigateTo(0));
   $('#end').on('click', () => navigateTo(images.length - 1));
+  $('#play').on('click', startSlideshow);
+  $('#stop').on('click', stopSlideshow);
+
   update();
 });
