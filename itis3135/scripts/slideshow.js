@@ -1,9 +1,8 @@
 let currentImage = 0;
-let interval = null; // For autoplay interval
-
+let interval = null; 
 const images = [
   { image: 'images/gallery/shaunakperi.PNG', text: 'Shaunak Peri' },
-  { image: 'images/gallery/handle.JPG', text: 'Handle in my dorm.' },
+  { image: 'images/gallery/handle.jpg', text: 'Handle in my dorm.' },
   { image: 'images/gallery/airpods.jpg', text: 'My Airpods.' },
   { image: 'images/gallery/university.jpg', text: 'University Of North Carolina Charlotte.' },
   { image: 'images/gallery/notebook.jpg', text: 'My math notebook.' },
